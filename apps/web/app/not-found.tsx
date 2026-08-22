@@ -1,0 +1,1 @@
+import Link from 'next/link';export default function NotFound(){return <section className="state"><p className="eyebrow">404</p><h1>We couldn’t find that home</h1><p>It may no longer be available, or the link might be incorrect.</p><Link className="interest" href="/">Explore available homes</Link></section>}

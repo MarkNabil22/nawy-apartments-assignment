@@ -1,0 +1,3 @@
+import type {Metadata} from 'next';import Link from 'next/link';import Image from 'next/image';import './globals.css';
+export const metadata:Metadata={title:'Nawy Homes',description:'Find a home made for your next chapter'};
+export default function Layout({children}:{children:React.ReactNode}){return <html lang="en"><body><header className="nav"><Link href="/" className="brand"><Image src="/mark.svg" width={38} height={38} alt=""/><span>Nawy Homes</span></Link><nav><Link href="/">Explore</Link><a href="#footer">About</a></nav></header><main>{children}</main><footer id="footer"><div><strong>Nawy Homes</strong><p>Thoughtful places for every chapter.</p></div><p>Built for the Nawy engineering assignment.</p></footer></body></html>}

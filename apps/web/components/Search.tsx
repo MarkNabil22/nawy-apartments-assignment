@@ -1,0 +1,3 @@
+'use client';
+import {useRouter} from 'next/navigation';import {FormEvent,useState} from 'react';
+export default function Search({initialValue}:{initialValue:string}){const router=useRouter();const [value,setValue]=useState(initialValue);function submit(e:FormEvent){e.preventDefault();router.push(value.trim()?`/?search=${encodeURIComponent(value.trim())}`:'/')};return <form className="search" onSubmit={submit} role="search"><span aria-hidden>⌕</span><input value={value} onChange={e=>setValue(e.target.value)} placeholder="Search by unit, number, or project" aria-label="Search apartments"/><button>Search</button></form>}
